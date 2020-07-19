@@ -1,14 +1,9 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Grid, Row, Col } from "react-flexbox-grid"
 import Header from "./header/"
+import 'react-flexbox-grid/dist/react-flexbox-grid.css';
+import "../fonts/fonts.css";
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,26 +20,27 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Grid>
+        <Row>
+          <Col xs={12}>
+            <main>{children}</main>
+          </Col>
+        </Row>
+      </Grid>
+      <footer>
+        <Grid>
+          <Row between="xs">
+            <Col>
+              © {new Date().getFullYear()}
+            </Col>
+            <Col>
+              Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </Col>
+          </Row>
+        </Grid>
+      </footer>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

@@ -1,27 +1,38 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { Col, Row, Grid } from 'react-flexbox-grid';
+import logo from './logo.svg';
 import { Wave, HeaderWrapper, HeaderContent } from "./styles"
 
-const Header = () => (
+const Header = React.memo(() => (
   <HeaderWrapper>
     <Wave
-      fill='#fff'
+      fill="#fff"
       paused={false}
       options={{
         height: 130,
-        amplitude: 10,
-        speed: 0.18,
-        points: 8
+        amplitude: 12,
+        speed: 0.22,
+        points: 2
       }}
     />
     <HeaderContent>
-      <h1>
-        <Link to="/">
-          Logo here
-        </Link>
-      </h1>
+      <Grid>
+      <Row middle="xs">
+        <Col>
+          <img src={logo} alt="husek.me Logo" width={95} height={95} />
+        </Col>
+        <Col>
+          <h1>
+            <Link to="/">
+              HUSEK
+            </Link>
+          </h1>
+        </Col>
+      </Row>
+      </Grid>
     </HeaderContent>
   </HeaderWrapper>
-);
+));
 
 export default Header

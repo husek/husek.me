@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import ReactWave from 'react-wavify'
 
 const HeaderWrapper = styled.header`
-  background: #5000ca;
+background: rgb(80,0,202);
+background: linear-gradient(166deg, rgba(80,0,202,1) 0%, rgba(101,0,255,1) 51%, rgba(33,0,107,1) 100%);
   margin-bottom: 1.45rem;
   height: 170px;
 `;
@@ -10,11 +11,15 @@ const HeaderWrapper = styled.header`
 const HeaderContent = styled.div`
   position: absolute;
   top: 0;
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1.45rem 1.0875rem;
+  width: 100%;
+  padding-top: 20px;
   h1 {
-    margin: 0;
+    margin-left: 15px;
+    a {
+      color: #fff;
+      font-family: 'CarlsonAntique';
+      text-decoration: none;
+    }
   }
 `;
 
