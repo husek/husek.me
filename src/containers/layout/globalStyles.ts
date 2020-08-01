@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 
-div, body, svg, header, path {
-   transition: background 500ms linear, color 0ms linear, fill 500ms linear;
+div, body, svg, header, path, i {
+  transition: background 500ms linear, color 0ms linear, fill 500ms linear;
 }
 
 a {
@@ -748,6 +748,11 @@ footer {
 footer a {
     color: ${({ theme }) => theme.linkColor};
 }
+
+main {
+  padding: 0.5em;
+}
 `;
+
 
 export default GlobalStyles;

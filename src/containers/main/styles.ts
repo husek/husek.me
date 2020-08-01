@@ -1,7 +1,15 @@
-import styled from "styled-components"
-import { Col } from "react-flexbox-grid"
+import styled from 'styled-components';
+import { Col } from 'react-flexbox-grid';
 
 const DevIntro = styled(Col)`
+ img {
+  display: block;
+  border-radius: 50%;
+ }
+ 
+ p img {
+  display: inline;
+ }
  h3 {
     color: ${({ theme }) => theme.boldColor};
     letter-spacing: 0.16em;
@@ -19,7 +27,7 @@ const DevIntro = styled(Col)`
     margin-left: 0.5em;
     margin-top: 0;
   }
-`
+`;
 
 
 const DevName = styled.h1`
@@ -45,4 +53,28 @@ const ContactCol = styled(Col)`
   }
 `;
 
-export { DevName, DevIntro, ContactCol }
+const Experience = styled.div`
+  margin: 3em 0;
+  h4 {
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: normal;
+    margin-bottom: 0.8em;
+  }
+  
+  small {
+    color: ${({ theme }) => theme.semiBoldColor};
+    display: block;
+    margin-top: -0.7em;
+    margin-bottom: 0.8em;
+    line-height: 1.3em;
+  }
+`;
+
+
+export {
+  DevName,
+  DevIntro,
+  ContactCol,
+  Experience
+};

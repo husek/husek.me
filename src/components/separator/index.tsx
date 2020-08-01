@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from 'react';
 import { Col, Row } from 'react-flexbox-grid';
-import { SeparatorWrapper } from "./styles"
+import { SeparatorWrapper } from './styles';
 
 const Separator = React.memo(() => (
   <SeparatorWrapper>
@@ -11,4 +11,3 @@ const Separator = React.memo(() => (
 ));
 
 export default Separator;
-

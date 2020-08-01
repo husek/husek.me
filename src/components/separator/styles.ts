@@ -6,4 +6,3 @@ const SeparatorWrapper = styled(Grid)`
 `;
 
 export { SeparatorWrapper };
-

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import ReactWave from 'react-wavify'
-import { Col } from 'react-flexbox-grid'
-import Icon from "../icon"
+import ReactWave from 'react-wavify';
+import { Col } from 'react-flexbox-grid';
+import Icon from '../icon';
 
 const HeaderWrapper = styled.header`
   background: ${({ theme }) => theme.accentColor};
@@ -11,6 +11,8 @@ const HeaderWrapper = styled.header`
 `;
 
 const HeaderContent = styled.div`
+  padding: 0.5em;
+
   position: absolute;
   top: 0;
   width: 100%;
@@ -32,9 +34,9 @@ const HeaderContent = styled.div`
 `;
 
 const ThemeChangerWrapper = styled(Col)`
-  position: absolute;
+  position: relative;
   text-align: right;
-  top: 1em;
+  top: -90px;
 `;
 
 const ThemeChanger = styled(Icon)`
@@ -46,4 +48,6 @@ const Wave = styled(ReactWave)`
   height: 260px
 `;
 
-export { HeaderWrapper, Wave, HeaderContent, ThemeChangerWrapper, ThemeChanger };
+export {
+  HeaderWrapper, Wave, HeaderContent, ThemeChangerWrapper, ThemeChanger
+};
