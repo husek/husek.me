@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Husek.me',
     description: 'Gabriel Husek, Senior Full-Stack Engineer, specialized into React, Redux, GraphQL, Server-side rendering and JavaScript in general',
-    author: '@husek'
+    author: '@husek',
+    siteUrl: 'https://husek.me'
   },
   plugins: [
     'gatsby-plugin-netlify-cms',
