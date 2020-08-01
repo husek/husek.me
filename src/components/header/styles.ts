@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import ReactWave from 'react-wavify'
+import { Col } from 'react-flexbox-grid'
+import Icon from "../icon"
 
 const HeaderWrapper = styled.header`
-background: rgb(80,0,202);
-background: linear-gradient(166deg, rgba(80,0,202,1) 0%, rgba(101,0,255,1) 51%, rgba(33,0,107,1) 100%);
+  background: ${({ theme }) => theme.accentColor};
+  background: ${({ theme }) => theme.splashColor};
   margin-bottom: 1.45rem;
   height: 170px;
 `;
@@ -14,13 +16,29 @@ const HeaderContent = styled.div`
   width: 100%;
   padding-top: 20px;
   h1 {
+    margin: 0; 
+    padding: 0;
     margin-left: 15px;
+   
+    svg {
+       color: ${({ theme }) => theme.contrastColor};
+    }
     a {
-      color: #fff;
-      font-family: 'CarlsonAntique';
+      color: ${({ theme }) => theme.logoColor};
+      font-family: 'CarlsonAntique', sans-serif;
       text-decoration: none;
     }
   }
+`;
+
+const ThemeChangerWrapper = styled(Col)`
+  position: absolute;
+  text-align: right;
+  top: 1em;
+`;
+
+const ThemeChanger = styled(Icon)`
+  cursor: pointer;
 `;
 
 const Wave = styled(ReactWave)`
@@ -28,4 +46,4 @@ const Wave = styled(ReactWave)`
   height: 260px
 `;
 
-export { HeaderWrapper, Wave, HeaderContent };
+export { HeaderWrapper, Wave, HeaderContent, ThemeChangerWrapper, ThemeChanger };

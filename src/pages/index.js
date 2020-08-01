@@ -1,4 +1,5 @@
 import * as React from 'react';
-import Main from './main';
+import Main from '../containers/main';
 
-export default Main;
+const Index = () => <Main />;
+export default Index;

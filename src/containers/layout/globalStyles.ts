@@ -1,10 +1,25 @@
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
+
+div, body, svg, header, path {
+   transition: background 500ms linear, color 0ms linear, fill 500ms linear;
+}
+
+a {
+  color: ${({ theme }) => theme.linkColor};
+  font-weight: bold;
+}
+
 html {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    background: ${({ theme }) => theme.accentColor};
 }
 
 body {
+    background: ${({ theme }) => theme.contrastColor};
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -75,11 +90,6 @@ dfn {
 h1 {
     font-size: 2em;
     margin: 0.67em 0;
-}
-
-mark {
-    background-color: #ff0;
-    color: #000;
 }
 
 small {
@@ -242,8 +252,8 @@ html {
 }
 
 body {
-    color: hsla(0, 0%, 0%, 0.8);
-    font-family: georgia, serif;
+    color: ${({ theme }) => theme.textColor};
+    font-family: 'Roboto', sans-serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -275,8 +285,8 @@ h1 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: CarlsonAntique, sans-serif;
+    letter-spacing: 0.1em;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
@@ -293,8 +303,8 @@ h2 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    letter-spacing: 0.1em;
+    font-family: CarlsonAntique, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
@@ -311,9 +321,9 @@ h3 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: CarlsonAntique, sans-serif;
     font-weight: bold;
+    letter-spacing: 0.1em;
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
     line-height: 1.1;
@@ -329,13 +339,25 @@ h4 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: CarlsonAntique, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1rem;
     line-height: 1.1;
 }
+
+ h3 {
+  color: ${({ theme }) => theme.boldColor};
+  letter-spacing: 0.16em;
+  margin-top: 0.1em;
+  margin-left: 0.1em;
+  }
+  h4 {
+  color: ${({ theme }) => theme.semiBoldColor};
+   letter-spacing: 0.16em;
+   margin-top: -1em;
+   margin-left: 0.1em;
+  }
 
 h5 {
     margin-left: 0;
@@ -347,8 +369,7 @@ h5 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: CarlsonAntique, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
@@ -365,8 +386,7 @@ h6 {
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: CarlsonAntique, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;
@@ -716,17 +736,18 @@ pre tt:after {
 }
 
 
+
 footer {
-    position: absolute;
-    bottom: 0;
+    background: ${({ theme }) => theme.accentColor};
     width: 100%;
-    background: rgb(80, 2, 202);
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    color: ${({ theme }) => theme.textColor};
     font-size: 0.7em;
 }
 
 footer a {
-    color: #fff;
+    color: ${({ theme }) => theme.linkColor};
 }
+`;
+
+export default GlobalStyles;
