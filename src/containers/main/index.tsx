@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Row, Col } from 'react-flexbox-grid';
+import { MDXRendererProps } from 'gatsby-plugin-mdx';
 import Layout from '../layout/layout';
 import SEO from '../layout/seo';
 import Separator from '../../components/separator';
@@ -7,19 +8,24 @@ import Icon from '../../components/icon';
 import {
   DevIntro, DevName, ContactCol, Experience
 } from './styles';
+import BlogPosts from '../../components/blogPost';
 // @ts-ignore
 import ObiWan from './assets/hellothere.png';
 // @ts-ignore
 import Husek from './assets/husek.jpg';
 
+interface props {
+  blogPosts: MDXRendererProps[];
+  projects: MDXRendererProps[];
+};
 
-const IndexPage = () => (
+const IndexPage = ({ blogPosts, projects }: props) => (
   <Layout>
     <SEO title="Gabriel Husek - Senior Software Engineer" />
     <Row>
       <DevIntro xs={12} md={7}>
         <Row middle="xs" style={{ marginBottom: '2em', padding: '0.5em', marginTop: '1.2em' }}>
-          <Col xs={12} lg={6} md={4}>
+          <Col xs={12} md={4} lg={5}>
             <img alt="Husek" src={Husek} />
           </Col>
           <Col xs={12} md={8} lg={6}>
@@ -142,16 +148,8 @@ const IndexPage = () => (
       <Col xs={12}>
         <h2>Projects</h2>
       </Col>
-      <Col xs={4}>
-        Article 1
-      </Col>
-
-      <Col xs={4}>
-        Article 2
-      </Col>
-
-      <Col xs={4}>
-        Article 3
+      <Col xs={12}>
+        <BlogPosts posts={projects} />
       </Col>
     </Row>
 
@@ -162,16 +160,8 @@ const IndexPage = () => (
       <Col xs={12}>
         <h2>Articles</h2>
       </Col>
-      <Col xs={4}>
-        Article 1
-      </Col>
-
-      <Col xs={4}>
-        Article 2
-      </Col>
-
-      <Col xs={4}>
-        Article 3
+      <Col xs={12}>
+        <BlogPosts posts={blogPosts} />
       </Col>
     </Row>
 

@@ -56,14 +56,20 @@ const ContactCol = styled(Col)`
 const Experience = styled.div`
   margin: 3em 0;
   h4 {
-    font-size: 1.2em;
-    font-family: 'Roboto', sans-serif;
+    color: ${({ theme }) => theme.boldColor};
+    font-size: 1.1em;
     letter-spacing: normal;
     margin-bottom: 0.8em;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  p {
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
   }
   
   small {
-    color: ${({ theme }) => theme.semiBoldColor};
+    color: ${({ theme }) => theme.boldColor};
     display: block;
     margin-top: -0.7em;
     margin-bottom: 0.8em;
