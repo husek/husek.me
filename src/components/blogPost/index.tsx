@@ -29,6 +29,11 @@ const BlogPosts = ({ posts }: props) => (
         </Col>
       );
     })}
+    <Col xs={2} xsOffset={10}>
+      <Link to="/blog">
+        View All Articles
+      </Link>
+    </Col>
   </Row>
 );
 

@@ -29,14 +29,11 @@ export const pageQuery = graphql`
         projects: allMdx(filter: {fileAbsolutePath: {regex: "/content/projects/"}}, limit: 3, sort: { fields: [frontmatter___date], order: DESC }) {
             edges {
                 node {
-                    excerpt
-                    fields {
-                        slug
-                    }
                     frontmatter {
                         date(formatString: "MMMM DD, YYYY")
                         title
                         description
+                        link
                     }
                 }
             }

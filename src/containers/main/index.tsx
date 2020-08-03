@@ -9,6 +9,7 @@ import {
   DevIntro, DevName, ContactCol, Experience
 } from './styles';
 import BlogPosts from '../../components/blogPost';
+import ProjectList from '../../components/projectList';
 // @ts-ignore
 import ObiWan from './assets/hellothere.png';
 // @ts-ignore
@@ -17,7 +18,7 @@ import Husek from './assets/husek.jpg';
 interface props {
   blogPosts: MDXRendererProps[];
   projects: MDXRendererProps[];
-};
+}
 
 const IndexPage = ({ blogPosts, projects }: props) => (
   <Layout>
@@ -149,7 +150,7 @@ const IndexPage = ({ blogPosts, projects }: props) => (
         <h2>Projects</h2>
       </Col>
       <Col xs={12}>
-        <BlogPosts posts={projects} />
+        <ProjectList posts={projects} />
       </Col>
     </Row>
 
