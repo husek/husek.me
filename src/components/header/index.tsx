@@ -11,7 +11,7 @@ import Logo from './assets/logo.inline.svg';
 
 interface props {
   currentTheme: string;
-  onChangeTheme(event: React.MouseEvent<HTMLDivElement>): void;
+  onChangeTheme(event: React.MouseEvent): void;
 }
 
 const Header = React.memo<props>(({ onChangeTheme, currentTheme }) => {

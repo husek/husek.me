@@ -11,24 +11,10 @@ interface props {
   children: React.ReactNode
 }
 
-const isBrowser = typeof window !== 'undefined';
-
 
 const Layout = React.memo<props>(({ children }) => {
-  const isDark = isBrowser ? window.matchMedia('(prefers-color-scheme: dark)') : {
-    matches: true,
-    addListener: () => null
-  };
-
-  const [currentTheme, setCurrentTheme] = React.useState(isDark.matches ? 'dark' : 'light');
+  const [currentTheme, setCurrentTheme] = React.useState('dark');
   const toggleTheme = () => setCurrentTheme(currentTheme === 'light' ? 'dark' : 'light');
-
-  React.useEffect(() => {
-    isDark.addListener(event => {
-      setCurrentTheme(event.matches ? 'dark' : 'light');
-    });
-  }, []);
-
 
   return (
     <>
@@ -49,7 +35,7 @@ const Layout = React.memo<props>(({ children }) => {
                 © {new Date().getFullYear()}
               </Col>
               <Col>
-                Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
+                Built with <a rel="noreferrer" target="_blank" href="https://www.gatsbyjs.org">Gatsby</a>
               </Col>
             </Row>
           </Grid>
