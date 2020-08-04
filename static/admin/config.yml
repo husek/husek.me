@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: thomaswang/gatsby-personal-starter-blog
+  name: husek.me
+  repo: husek/husek.me
 
 media_folder: content/assets
 public_folder: ../assets
@@ -16,3 +16,14 @@ collections:
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
+      -
+  - name: projects
+    label: Projects
+    folder: content/projects
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: link, label: Link }

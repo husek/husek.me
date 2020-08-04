@@ -157,14 +157,16 @@ const IndexPage = ({ blogPosts, projects }: props) => (
     <Separator />
 
 
-    <Row>
-      <Col xs={12}>
-        <h2>Articles</h2>
-      </Col>
-      <Col xs={12}>
-        <BlogPosts posts={blogPosts} />
-      </Col>
-    </Row>
+    {blogPosts.length > 0 && (
+      <Row>
+        <Col xs={12}>
+          <h2>Articles</h2>
+        </Col>
+        <Col xs={12}>
+          <BlogPosts posts={blogPosts} />
+        </Col>
+      </Row>
+    )}
 
     <Separator />
 
