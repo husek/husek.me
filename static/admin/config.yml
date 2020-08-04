@@ -1,7 +1,9 @@
 backend:
-  name: husek.me
+  name: github
   repo: husek/husek.me
+  branch: master
 
+media_folder: content/assets
 public_folder: ../assets
 
 collections:
