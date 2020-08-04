@@ -10,13 +10,13 @@ module.exports = {
     'gatsby-plugin-feed-mdx',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: 'blog'
-      }
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/content/blog`,
+    //     name: 'blog'
+    //   }
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
