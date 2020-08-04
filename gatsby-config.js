@@ -24,13 +24,13 @@ module.exports = {
         name: 'projects'
       }
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: 'assets'
-      }
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/content/assets`,
+    //     name: 'assets'
+    //   }
+    // },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
