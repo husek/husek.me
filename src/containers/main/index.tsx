@@ -5,7 +5,6 @@ import Layout from '../layout/layout';
 import SEO from '../layout/seo';
 import Separator from '../../components/separator';
 import Icon from '../../components/icon';
-import BlogPosts from '../../components/blogPost';
 import ProjectList from '../../components/projectList';
 import {
   DevIntro,
@@ -19,19 +18,22 @@ import ObiWan from './assets/hellothere.png';
 // @ts-ignore
 import Husek from './assets/husek.jpg';
 
+// const BlogPosts = React.lazy(() => import('../../components/blogPost'));
+
+
 interface props {
-  blogPosts: MDXRendererProps[];
+  blogPosts?: MDXRendererProps[];
   projects: MDXRendererProps[];
 }
 
-const IndexPage = ({ blogPosts, projects }: props) => (
+const IndexPage = ({ projects }: props) => (
   <Layout>
     <SEO title="Gabriel Husek - Senior Software Engineer" />
     <Row>
       <DevIntro xs={12} md={7}>
         <Row middle="xs" style={{ marginBottom: '2em', padding: '0.5em', marginTop: '1.2em' }}>
-          <Col xs={12} md={4} lg={5}>
-            <img width="200" height="auto" alt="Husek" src={Husek} />
+          <Col xs={12} sm={12} md={12} lg={5}>
+            <img width="200" height="200" alt="Husek" src={Husek} />
           </Col>
           <Col xs={12} md={8} lg={6}>
             <DevName>Gabriel Husek</DevName>
@@ -41,7 +43,7 @@ const IndexPage = ({ blogPosts, projects }: props) => (
         </Row>
 
         <p>
-          Hello there <img width="30px" src={ObiWan} alt="Why, hello there" />
+          Hello there <img width="30" height="28" src={ObiWan} alt="Why, hello there" />
         </p>
 
         <p>
@@ -159,20 +161,6 @@ const IndexPage = ({ blogPosts, projects }: props) => (
         <ProjectList posts={projects} />
       </Col>
     </Row>
-
-    <Separator />
-
-
-    {blogPosts.length > 0 && (
-      <Row>
-        <Col xs={12}>
-          <h2>Articles</h2>
-        </Col>
-        <Col xs={12}>
-          <BlogPosts posts={blogPosts} />
-        </Col>
-      </Row>
-    )}
 
     <Separator />
 

@@ -30,7 +30,7 @@ const DevIntro = styled(Col)`
 `;
 
 
-const DevName = styled.h1`
+const DevName = styled.h2`
   background: ${({ theme }) => theme.accentColor};
   color: ${({ theme }) => theme.logoColor};
   display: inline-block;
