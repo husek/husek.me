@@ -55,7 +55,7 @@ const ContactCol = styled(Col)`
 
 const Experience = styled.div`
   margin: 3em 0;
-  h4 {
+  h3, h4 {
     color: ${({ theme }) => theme.boldColor};
     font-size: 1.1em;
     letter-spacing: normal;

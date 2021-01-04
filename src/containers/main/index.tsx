@@ -5,11 +5,15 @@ import Layout from '../layout/layout';
 import SEO from '../layout/seo';
 import Separator from '../../components/separator';
 import Icon from '../../components/icon';
-import {
-  DevIntro, DevName, ContactCol, Experience
-} from './styles';
 import BlogPosts from '../../components/blogPost';
 import ProjectList from '../../components/projectList';
+import {
+  DevIntro,
+  DevName,
+  ContactCol,
+  Experience
+} from './styles';
+
 // @ts-ignore
 import ObiWan from './assets/hellothere.png';
 // @ts-ignore
@@ -27,7 +31,7 @@ const IndexPage = ({ blogPosts, projects }: props) => (
       <DevIntro xs={12} md={7}>
         <Row middle="xs" style={{ marginBottom: '2em', padding: '0.5em', marginTop: '1.2em' }}>
           <Col xs={12} md={4} lg={5}>
-            <img alt="Husek" src={Husek} />
+            <img width="200" height="auto" alt="Husek" src={Husek} />
           </Col>
           <Col xs={12} md={8} lg={6}>
             <DevName>Gabriel Husek</DevName>
@@ -69,19 +73,19 @@ const IndexPage = ({ blogPosts, projects }: props) => (
           </Col>
 
           <ContactCol>
-            <a href="https://github.com/husek/">
+            <a href="https://github.com/husek/" aria-label="Github">
               <Icon name="github" size="2em" />
             </a>
           </ContactCol>
 
           <ContactCol>
-            <a href="https://www.linkedin.com/in/husek/">
+            <a href="https://www.linkedin.com/in/husek/" aria-label="linkedIn">
               <Icon name="linkedin" size="1.8em" />
             </a>
           </ContactCol>
 
           <ContactCol>
-            <a href="mailto:husek@me.com">
+            <a href="mailto:husek@me.com" aria-label="Email">
               <Icon name="envelope-o" size="1.5em" />
             </a>
           </ContactCol>
@@ -92,9 +96,11 @@ const IndexPage = ({ blogPosts, projects }: props) => (
       <Col xs={12} md={4} mdOffset={1}>
         <h2>Experience</h2>
         <Experience>
-          <h4>Senior Software Engineer @<a href="https://videri.com/">Videri</a></h4>
-          <small>React, Redux-Saga, React Native, TypeScript, Styled-Components, Ember.js, Canvas, Node.js,
-            Next.js</small>
+          <h3>Senior Software Engineer @<a href="https://videri.com/">Videri</a></h3>
+          <small>
+            React, Redux-Saga, React Native, TypeScript, Styled-Components, Ember.js, Canvas, Node.js,
+            Next.js
+          </small>
 
           <p>
             Currently working on Creative Studio, a photoshop-esque drag-and-drop web app, empowering the user to
@@ -108,7 +114,7 @@ const IndexPage = ({ blogPosts, projects }: props) => (
         </Experience>
 
         <Experience>
-          <h4>Lead Software Engineer @<a href="https://nestready.ai">NestReady</a></h4>
+          <h3>Lead Software Engineer @<a href="https://nestready.ai">NestReady</a></h3>
           <small>React, Redux, GraphQL, Node.js, ElasticSearch, PostgreSQL, Firebase, K8s, GCP</small>
 
           <p>
@@ -123,7 +129,7 @@ const IndexPage = ({ blogPosts, projects }: props) => (
         </Experience>
 
         <Experience>
-          <h4>Senior Full-Stack Engineer @<a href="https://oktium.com">Oktium</a></h4>
+          <h3>Senior Full-Stack Engineer @<a href="https://oktium.com">Oktium</a></h3>
           <small>React, Redux, SSR, WebRTC, Node.js, MongoDB, Redis, AWS, Docker</small>
           <p>
             Ported the iOS app to the Web, allowing calls from browser-to-device, device-to-browser and its associated

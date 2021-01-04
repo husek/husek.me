@@ -35,7 +35,7 @@ const Layout = React.memo<props>(({ children }) => {
                 © {new Date().getFullYear()}
               </Col>
               <Col>
-                Built with <a rel="noreferrer" target="_blank" href="https://www.gatsbyjs.org">Gatsby</a>
+                Built with <a rel="noreferrer noopener" target="_blank" href="https://www.gatsbyjs.org">Gatsby</a>
               </Col>
             </Row>
           </Grid>

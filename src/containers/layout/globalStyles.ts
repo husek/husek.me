@@ -741,18 +741,17 @@ footer {
     background: ${({ theme }) => theme.accentColor};
     width: 100%;
     font-family: 'Roboto', sans-serif;
-    color: ${({ theme }) => theme.textColor};
+    color: ${({ theme }) => theme.logoColor};
     font-size: 0.7em;
 }
 
 footer a {
-    color: ${({ theme }) => theme.linkColor};
+    color: ${({ theme }) => theme.logoColor};
 }
 
 main {
   padding: 0.5em;
 }
 `;
-
 
 export default GlobalStyles;
