@@ -97,6 +97,22 @@ const IndexPage = ({ projects }: props) => (
 
       <Col xs={12} md={4} mdOffset={1}>
         <h2>Experience</h2>
+
+        <Experience>
+          <h3>Principal Software Engineer @<a href="https://upgrade.com/">Upgrade</a></h3>
+          <small>
+            React, Redux, GraphQl, Apollo, React Native, Node.js, Java Spring Boot
+          </small>
+        </Experience>
+
+        <Experience>
+          <h3>Senior Software Engineer @<a href="https://goto.com/">GoTo / LogMeIn</a></h3>
+          <small>
+            React, Redux, React Native, TypeScript, Electron, Node.js, Java Spring Boot
+          </small>
+        </Experience>
+
+
         <Experience>
           <h3>Senior Software Engineer @<a href="https://videri.com/">Videri</a></h3>
           <small>
@@ -105,7 +121,7 @@ const IndexPage = ({ projects }: props) => (
           </small>
 
           <p>
-            Currently working on Creative Studio, a photoshop-esque drag-and-drop web app, empowering the user to
+            Worked on Creative Studio, a photoshop-esque drag-and-drop web app, empowering the user to
             compose
             their own 'dashboards' and export them to their Canvases.
           </p>
@@ -143,7 +159,7 @@ const IndexPage = ({ projects }: props) => (
 
         <Separator />
         <div>
-          <h4>... and a lot of other places, in the last 12 years.</h4>
+          <h4>... and a lot of other places, in the last 17 years.</h4>
         </div>
       </Col>
 
